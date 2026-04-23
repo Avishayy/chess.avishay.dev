@@ -113,13 +113,15 @@
             color: var(--accent-dark);
             border-bottom-color: var(--accent-dark);
         }
-        video {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            margin-top: 12px;
+        .screenshot {
             display: block;
-            background: var(--paper);
+            margin: 16px auto 0;
+            max-width: 340px;
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 6px 24px rgba(45, 36, 24, 0.12);
         }
         code {
             background: var(--paper);
@@ -188,19 +190,8 @@
             <li>Click <em>Expand</em> for a larger view with a FEN readout and reset button.</li>
         </ul>
 
-        <h2>Demo</h2>
-        <video src="/demo.mp4" controls playsinline preload="metadata" poster="/logo.png"></video>
-
-        <h2>What's under the hood</h2>
-        <p>
-            The app is a small MCP server that validates chess positions and returns a React widget. The board
-            is rendered with
-            <a href="https://github.com/lichess-org/chessground" target="_blank" rel="noopener">chessground</a>
-            (Lichess's board component) and positions are validated with
-            <a href="https://github.com/jhlywa/chess.js" target="_blank" rel="noopener">chess.js</a>. The piece
-            sprites and knight silhouette in the app icon are by Colin M.L. Burnett, licensed under
-            <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a>.
-        </p>
+        <h2>Screenshot</h2>
+        <img class="screenshot" src="/screenshot.jpg" alt="Chess Position Analyzer running in ChatGPT, showing a chess position after a few opening moves." loading="lazy">
 
         <h2>Support</h2>
         <p>
